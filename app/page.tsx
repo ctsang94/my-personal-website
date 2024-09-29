@@ -55,9 +55,11 @@ export default function PersonalWebsite() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <img
+            <Image
               src='/kelvinpfp_500x500.jpg'
               alt="Kelvin Tsang"
+              width={160}
+              height={160}
               className="h-40 w-40 rounded-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
             />
             {isHovered && (
@@ -84,7 +86,7 @@ export default function PersonalWebsite() {
             <h2 className="mb-4 text-2xl font-semibold">Projects</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {projects.map((project) => (
-               <Link href={project.url} key={project.id} passHref>
+               <Link href={project.url} key={project.id} passHref target="_blank" rel="noopener noreferrer">
                <Card className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg text-white hover:bg-opacity-20 transition-all duration-300 flex flex-col cursor-pointer">
                  <CardHeader className="flex-grow">
                    <CardTitle>{project.title}</CardTitle>
@@ -121,19 +123,19 @@ export default function PersonalWebsite() {
                     <label htmlFor="name" className="mb-2 block text-sm font-medium">
                       Name
                     </label>
-                    <Input id="name" placeholder="Your Name" className="bg-white bg-opacity-20 text-white placeholder-gray-300" />
+                    <Input id="name" name="name" placeholder="Your Name" className="bg-white bg-opacity-20 text-white placeholder-gray-300" />
                   </div>
                   <div>
                     <label htmlFor="email" className="mb-2 block text-sm font-medium">
                       Email
                     </label>
-                    <Input id="email" type="email" placeholder="your@email.com" className="bg-white bg-opacity-20 text-white placeholder-gray-300" />
+                    <Input id="email" name="email" type="email" placeholder="your@email.com" className="bg-white bg-opacity-20 text-white placeholder-gray-300" />
                   </div>
                   <div>
                     <label htmlFor="message" className="mb-2 block text-sm font-medium">
                       Message
                     </label>
-                    <Textarea id="message" placeholder="Your message here..." className="bg-white bg-opacity-20 text-white placeholder-gray-300" />
+                    <Textarea id="message" name="message" placeholder="Your message here..." className="bg-white bg-opacity-20 text-white placeholder-gray-300" />
                   </div>
                   <Button type="submit" className="bg-white text-purple-600 hover:bg-gray-200">Send Message</Button>
                 </form>
