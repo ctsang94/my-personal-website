@@ -76,7 +76,7 @@ export default function PersonalWebsite() {
           <section className="mb-12 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6">
             <h2 className="mb-4 text-2xl font-semibold">About Me</h2>
             <p className="text-gray-200">
-              I'm a passionate web developer with 5 years of experience in Desktop Support.
+              I&apos;m a passionate web developer with 5 years of experience in Desktop Support.
               My expertise includes React, Next.js, and Tailwind CSS. I love turning complex problems into simple,
               beautiful, and intuitive designs.
             </p>
